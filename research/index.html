@@ -1,4 +1,4 @@
-u<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,69 @@ u<!DOCTYPE html>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/ico" href="../images/favicon.ico"/>
     <link rel="stylesheet" href="../style.css">
+    <style>
+        .research-area-content {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 2rem;
+            align-items: start;
+            margin-top: 1rem;
+        }
+        
+        .research-figure {
+            background: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            color: #6c757d;
+            font-style: italic;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .pipeline-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+        }
+        
+        .pipeline-flow {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .pipeline-arrow {
+            font-size: 2rem;
+            margin: 0 1rem;
+            color: #ffd700;
+        }
+        
+        @media (max-width: 768px) {
+            .research-area-content {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .research-figure {
+                min-height: 150px;
+                padding: 1rem;
+            }
+            
+            .pipeline-flow {
+                font-size: 1.2rem;
+            }
+            
+            .pipeline-arrow {
+                display: block;
+                margin: 1rem 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="site-header">
@@ -57,56 +120,97 @@ u<!DOCTYPE html>
                 <div class="research-area">
                     <h3>Precision Protein Design</h3>
                     <h4 style="font-style: italic; color: var(--medium-text); margin-bottom: 1rem;">How can we predict and control exactly where modifications occur on proteins?</h4>
-                    <p>
-                        The foundation of controllable therapeutics begins with molecular-level precision. We use computational methods to predict and precisely control protein modification sites,
-                        enabling the rational design of protein therapeutics with pre-determined properties. Our approach combines molecular dynamics simulations with 
-                        experimental validation to create predictive models that guide site-specific bioconjugation strategies. Using structure-guided design principles, we can target specific amino acid residues with atomic-level accuracy.
-                        This foundational capability allows us to engineer proteins with atomic level precision, setting the stage for creating responsive systems and advanced delivery platforms
-                    </p>
-                    <ul>
-                        <li>Computational prediction of modification sites (PRELYM)</li>
-                        <li>Site-specific bioconjugation strategies </li>
-                        <li>Enhanced protein stability and solubility</li>
-                        <li>Structure-guided therapeutic design</li>
-                    </ul>
+                    
+                    <div class="research-area-content">
+                        <div>
+                            <p>
+                                The foundation of controllable therapeutics begins with molecular-level precision. We use computational methods to predict and precisely control protein modification sites,
+                                enabling the rational design of protein therapeutics with pre-determined properties. Our approach combines molecular dynamics simulations with 
+                                experimental validation to create predictive models that guide site-specific bioconjugation strategies. Using structure-guided design principles, we can target specific amino acid residues with atomic-level accuracy.
+                                This foundational capability allows us to engineer proteins with atomic level precision, setting the stage for creating responsive systems and advanced delivery platforms
+                            </p>
+                            <ul>
+                                <li>Computational prediction of modification sites (PRELYM)</li>
+                                <li>Site-specific bioconjugation strategies </li>
+                                <li>Enhanced protein stability and solubility</li>
+                                <li>Structure-guided therapeutic design</li>
+                            </ul>
+                        </div>
+                        <div class="research-figure">
+                            [Protein structure diagram showing computational prediction of lysine reactivity sites with ATRP polymer growth visualization]
+                        </div>
+                    </div>
                 </div>
 
                 <div class="research-area">
                     <h3>Smart Protein Engineering</h3>
                     <h4 style="font-style: italic; color: var(--medium-text); margin-bottom: 1rem;">Can we create proteins that intelligently adapt to their environment?</h4>
-            
-                    <p>
-                        Building on our precision design capabilities, we engineer smart protein systems that intelligently respond to specific biological stimuli such as pH, 
-                        temperature, or chemical environment. These responsive systems enable proteins to function optimally under diverse conditions while adapting their behaviour based on the local cellular environment. 
-                        Through rational surfactant selection or polymer engineering, we create adaptive therapeutic systems that can tune their lipophilicity, activity, stability, and substrate specificity in response to environmental changes. These smart, responsive proteins become the foundation for advanced therapeutic formulations that can adapt and deliver targeted treatments precisely when and where needed.
-                    </p>
-                    <ul>
-                        <li>Stimulus-responsive protein engineering</li>
-                        <li>Environmental sensing capabilities</li>
-                        <li>Targeted drug delivery systems</li>
-                        <li>Controlled release mechanisms</li>
-                       
-                    </ul>
+                    
+                    <div class="research-area-content">
+                        <div>
+                            <p>
+                                Building on our precision design capabilities, we engineer smart protein systems that intelligently respond to specific biological stimuli such as pH, 
+                                temperature, or chemical environment. These responsive systems enable proteins to function optimally under diverse conditions while adapting their behaviour based on the local cellular environment. 
+                                Through rational surfactant selection or polymer engineering, we create adaptive therapeutic systems that can tune their lipophilicity, activity, stability, and substrate specificity in response to environmental changes. These smart, responsive proteins become the foundation for advanced therapeutic formulations that can adapt and deliver targeted treatments precisely when and where needed.
+                            </p>
+                            <ul>
+                                <li>Stimulus-responsive protein engineering</li>
+                                <li>Environmental sensing capabilities</li>
+                                <li>Targeted drug delivery systems</li>
+                                <li>Controlled release mechanisms</li>
+                            </ul>
+                        </div>
+                        <div class="research-figure">
+                            [Diagram showing protein with stimuli-responsive polymer corona and surfactant complexation, demonstrating enhanced activity and adaptability]
+                        </div>
+                    </div>
                 </div>
 
                 <div class="research-area">
                     <h3>Advanced Therapeutic Formulations</h3>
-                      <h4 style="font-style: italic; color: var(--medium-text); margin-bottom: 1rem;">How can we create programmable delivery systems for protein therapeutics?</h4>
-                    <p>
-                        We design and synthesise novel formulation platforms that integrate our precisely modified and responsive proteins into complete therapeutic delivery systems. These platforms overcombe biological barriers and provide programmable control over when, where, and how therapeutic proteins are delivered.
-                        Our approach encompasses innovative protein-based carriers (e.g., pH-responsive ferritin nanocages) and advanced lipid-based systems for oral delivery, all engineered for controlled therapeutic action.
-                        These therapeutic platforms combine predictable design, responsive behaviour, and controlled delivery to create next-generation protein medicines with programmable therapeutic action.
-        </p>
-                    <ul>
-                        <li>Novel nanocarrier design</li>
-                        <li>Targeted protein delivery</li>
-                        <li>Barrier penetration enhancement</li>
-                        <li>Improved therapeutic efficacy</li>
-                    </ul>
+                    <h4 style="font-style: italic; color: var(--medium-text); margin-bottom: 1rem;">How can we create programmable delivery systems for protein therapeutics?</h4>
+                    
+                    <div class="research-area-content">
+                        <div>
+                            <p>
+                                We design and synthesise novel formulation platforms that integrate our precisely modified and responsive proteins into complete therapeutic delivery systems. These platforms overcome biological barriers and provide programmable control over when, where, and how therapeutic proteins are delivered.
+                                Our approach encompasses innovative protein-based carriers (e.g., pH-responsive ferritin nanocages) and advanced lipid-based systems for oral delivery, all engineered for controlled therapeutic action.
+                                These therapeutic platforms combine predictable design, responsive behaviour, and controlled delivery to create next-generation protein medicines with programmable therapeutic action.
+                            </p>
+                            <ul>
+                                <li>Novel nanocarrier design</li>
+                                <li>Targeted protein delivery</li>
+                                <li>Barrier penetration enhancement</li>
+                                <li>Improved therapeutic efficacy</li>
+                            </ul>
+                        </div>
+                        <div class="research-figure">
+                            [Diagram showing ferritin nanocage assembly/disassembly cycle with protein cargo, alongside lipid nanocarrier systems]
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <section class="pipeline-section">
+            <div class="container text-center">
+                <h2 class="section-title" style="color: white;">Integrated Pipeline for Controllable Therapeutics</h2>
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <div class="pipeline-flow">
+                        Precision Protein Design 
+                        <span class="pipeline-arrow">→</span>
+                        Smart Protein Engineering 
+                        <span class="pipeline-arrow">→</span>
+                        Advanced Therapeutic Formulations
+                    </div>
+                    <p style="font-size: 1.1rem; line-height: 1.6; margin-top: 2rem;">
+                        Our multi-scale approach creates protein therapeutics that are not just more stable or more targeted, 
+                        but fundamentally more intelligent and controllable than conventional approaches. By integrating 
+                        molecular-level precision with protein-level responsiveness and system-level programmability, 
+                        we enable unprecedented control over therapeutic action.
+                    </p>
+                </div>
+            </div>
         </section>
 
         <section class="section">
@@ -143,4 +247,4 @@ u<!DOCTYPE html>
     <script src="../script.js"></script>
     <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
 </body>
-</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+</html>
