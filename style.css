@@ -11,6 +11,10 @@
     --card-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     --card-hover-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
     --font-main: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* PRIME Lab colour palette */
+    --prime-blue: #1f4e79;
+    --prime-green: #2e8b57;
+    --prime-orange: #f28c28;
 }
 
 * {
@@ -333,7 +337,7 @@ main {
 }
 
 .section {
-    padding: 4rem 0;
+    padding: 4.5rem 0;
 }
 .section-bg {
     background-color: #ffffff;
@@ -459,6 +463,63 @@ main {
     box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
 }
 
+/* Hero subtitle */
+.hero-subtitle {
+    font-size: 1.15rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-color) !important;
+    margin-bottom: 1rem !important;
+    opacity: 0.95;
+}
+
+/* Our Approach Section */
+.our-approach-section {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 4rem 0;
+}
+.our-approach-text {
+    max-width: 780px;
+    margin: 0 auto 2.5rem auto;
+    font-size: 1.1rem;
+    color: var(--medium-text);
+    line-height: 1.8;
+}
+.approach-pillars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.approach-pillar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.2rem 2rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #fff;
+    min-width: 160px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.approach-pillar .pillar-icon {
+    font-size: 1.6rem;
+}
+.pillar-blue  { background-color: var(--prime-blue); }
+.pillar-green { background-color: var(--prime-green); }
+.pillar-orange { background-color: var(--prime-orange); }
+.approach-arrow {
+    font-size: 1.8rem;
+    color: var(--medium-text);
+    font-weight: 300;
+    padding: 0 0.25rem;
+}
+
 .research-highlights {
     padding: 4rem 0;
     background-color: rgba(255, 255, 255, 0.7);
@@ -507,6 +568,37 @@ main {
     background-color: var(--primary-color);
     color: var(--light-text);
 }
+
+/* Research card body & description */
+.research-highlight-card .card-body {
+    padding: 1.5rem 1.2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.research-highlight-card h3 {
+    padding: 0;
+    min-height: auto;
+    margin-bottom: 0.6rem;
+}
+.research-highlight-card .card-desc {
+    font-size: 0.92rem;
+    color: var(--medium-text);
+    text-align: center;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Card colour accents – top border */
+.card-accent-blue  { border-top: 4px solid var(--prime-blue); }
+.card-accent-green { border-top: 4px solid var(--prime-green); }
+.card-accent-orange { border-top: 4px solid var(--prime-orange); }
+
+.card-accent-blue  h3 { color: var(--prime-blue); }
+.card-accent-green h3 { color: var(--prime-green); }
+.card-accent-orange h3 { color: var(--prime-orange); }
 
 /* --- Funders Section --- */
 .funders-section {
@@ -832,6 +924,10 @@ main {
     .section { padding: 3rem 0; }
     .section-title { font-size: 1.8rem; margin-bottom: 2rem;}
     
+    .approach-pillars { gap: 0.75rem; }
+    .approach-pillar { padding: 1rem 1.5rem; min-width: 130px; font-size: 0.95rem; }
+    .approach-arrow { font-size: 1.4rem; }
+
     .site-footer { padding: 2rem 0; }
     .social-links { margin-top: 1rem; gap: 1rem; }
     .social-links img { width: 28px; height: 28px; }

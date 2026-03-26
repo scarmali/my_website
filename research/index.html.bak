@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - Protein-Material Interface Group</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/ico" href="../images/favicon.ico"/>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../images/PMIG Logo Colour.png" alt="PMIG - Protein-Material Interface Group Logo">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="nav-item-has-dropdown">
+                        <a href="index.html" class="active">Research <span class="dropdown-arrow">▾</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="collaborations.html">Collaborations</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../team.html">Team</a></li>
+                    <li><a href="../publications.html">Publications</a></li>
+                    <li><a href="../opportunities.html">Opportunities</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-landing">
+            <div class="hero-landing-content container">
+                <h1>Our Research</h1>
+                <p>Pioneering innovations in protein-material interfaces for advanced therapeutic applications</p>
+            </div>
+        </section>
+
+        <section class="research-highlights">
+            <div class="container">
+                <h2 class="section-title">Research Overview</h2>
+                <p class="text-center" style="max-width: 800px; margin: 0 auto 3rem auto; font-size: 1.1rem; color: var(--medium-text);">
+                    Our research group focuses on the fundamental understanding and engineering of protein-material interfaces 
+                    to develop next-generation therapeutic delivery systems. We combine computational modeling, synthetic biology, 
+                    and advanced materials science to create predictable and responsive biomolecular systems.
+                </p>
+            </div>
+        </section>
+
+        <section class="section section-bg-alt">
+            <div class="container">
+                <h2 class="section-title">Key Research Areas</h2>
+                
+                <div class="research-area">
+                    <h3>Predictable Protein-Polymer Bioconjugation</h3>
+                    <p>
+                        We develop computational methods to predict and optimize protein-polymer conjugation sites, 
+                        enabling the rational design of protein therapeutics with enhanced stability, solubility, 
+                        and pharmacokinetic properties. Our approach combines molecular dynamics simulations with 
+                        experimental validation to create predictive models for bioconjugation outcomes.
+                    </p>
+                    <ul>
+                        <li>Computational prediction of conjugation sites</li>
+                        <li>Enhanced protein stability and solubility</li>
+                        <li>Optimized pharmacokinetic properties</li>
+                        <li>Rational therapeutic design</li>
+                    </ul>
+                </div>
+
+                <div class="research-area">
+                    <h3>Responsive Protein Systems</h3>
+                    <p>
+                        Our team engineers smart protein systems that respond to specific biological stimuli such as pH, 
+                        temperature, or enzymatic activity. These responsive systems enable targeted drug delivery and 
+                        controlled release mechanisms that can adapt to the local cellular environment.
+                    </p>
+                    <ul>
+                        <li>Stimulus-responsive protein engineering</li>
+                        <li>Targeted drug delivery systems</li>
+                        <li>Controlled release mechanisms</li>
+                        <li>Environmental sensing capabilities</li>
+                    </ul>
+                </div>
+
+                <div class="research-area">
+                    <h3>Nanostructured Therapeutic Carriers</h3>
+                    <p>
+                        We design and synthesize novel nanostructured carriers that can encapsulate and deliver 
+                        therapeutic proteins to specific tissues and cells. These carriers are engineered to overcome 
+                        biological barriers and improve the efficacy of protein-based therapies.
+                    </p>
+                    <ul>
+                        <li>Novel nanocarrier design</li>
+                        <li>Targeted protein delivery</li>
+                        <li>Barrier penetration enhancement</li>
+                        <li>Improved therapeutic efficacy</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Research Methods & Techniques</h2>
+                <div class="grid grid-cols-2">
+                    <div class="card">
+                        <h3>Computational Modeling</h3>
+                        <ul>
+                            <li>Molecular dynamics simulations</li>
+                            <li>Protein structure prediction</li>
+                            <li>Machine learning approaches</li>
+                            <li>Quantum mechanical calculations</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Protein Engineering</h3>
+                        <ul>
+                            <li>Site-directed mutagenesis</li>
+                            <li>Directed evolution</li>
+                            <li>Protein expression and purification</li>
+                            <li>Bioconjugation chemistry</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Materials Synthesis</h3>
+                        <ul>
+                            <li>Polymer synthesis</li>
+                            <li>Nanoparticle fabrication</li>
+                            <li>Surface modification</li>
+                            <li>Controlled polymerization</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Characterization</h3>
+                        <ul>
+                            <li>Dynamic light scattering</li>
+                            <li>Circular dichroism spectroscopy</li>
+                            <li>Mass spectrometry</li>
+                            <li>Electron microscopy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="research-highlights">
+            <div class="container">
+                <h2 class="section-title">Featured Research Projects</h2>
+                <div class="grid grid-cols-3 research-highlight-grid">
+                    <div class="research-highlight-card">
+                        <img src="../images/research-highlight-bioconjugation.jpg" alt="AI-Guided Protein Conjugation" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div style="display: none; width: 100%; height: 220px; background: #f0f0f0; align-items: center; justify-content: center; color: #666; font-size: 14px;">Project Image Coming Soon</div>
+                        <h3>AI-Guided Protein Conjugation</h3>
+                    </div>
+                    <div class="research-highlight-card">
+                        <img src="../images/research-highlight-responsive.jpg" alt="pH-Responsive Drug Carriers" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div style="display: none; width: 100%; height: 220px; background: #f0f0f0; align-items: center; justify-content: center; color: #666; font-size: 14px;">Project Image Coming Soon</div>
+                        <h3>pH-Responsive Drug Carriers</h3>
+                    </div>
+                    <div class="research-highlight-card">
+                        <img src="../images/research-highlight-nanocarriers.jpg" alt="Enzyme-Cleavable Linkers" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div style="display: none; width: 100%; height: 220px; background: #f0f0f0; align-items: center; justify-content: center; color: #666; font-size: 14px;">Project Image Coming Soon</div>
+                        <h3>Enzyme-Cleavable Linkers</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-bg-alt">
+            <div class="container">
+                <h2 class="section-title">Current Projects</h2>
+                <div class="grid grid-cols-3">
+                    <div class="card">
+                        <h3>AI-Guided Protein Conjugation</h3>
+                        <p>Developing machine learning models to predict optimal conjugation sites for therapeutic proteins.</p>
+                        <div style="margin-top: auto; padding-top: 1rem;">
+                            <span style="background: var(--accent-color); color: var(--primary-color); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 500;">Active</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>pH-Responsive Drug Carriers</h3>
+                        <p>Engineering protein-based carriers that release therapeutics in response to tumor microenvironment pH.</p>
+                        <div style="margin-top: auto; padding-top: 1rem;">
+                            <span style="background: var(--accent-color); color: var(--primary-color); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 500;">Active</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>Enzyme-Cleavable Linkers</h3>
+                        <p>Designing smart linkers that can be cleaved by disease-specific enzymes for targeted therapy.</p>
+                        <div style="margin-top: auto; padding-top: 1rem;">
+                            <span style="background: var(--accent-color); color: var(--primary-color); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 500;">Active</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>Computational Protein Design</h3>
+                        <p>Using molecular dynamics simulations to predict protein stability and design modifications.</p>
+                        <div style="margin-top: auto; padding-top: 1rem;">
+                            <span style="background: var(--secondary-color); color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 500;">In Planning</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>Biomimetic Nanocarriers</h3>
+                        <p>Developing cell-membrane-inspired carriers for enhanced biocompatibility and targeting.</p>
+                        <div style="margin-top: auto; padding-top: 1rem;">
+                            <span style="background: var(--secondary-color); color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 500;">In Planning</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>Therapeutic Protein Optimization</h3>
+                        <p>Enhancing existing therapeutic proteins through strategic modification and conjugation strategies.</p>
+                        <div style="margin-top: auto; padding-top: 1rem;">
+                            <span style="background: var(--accent-color); color: var(--primary-color); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 500;">Active</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container text-center">
+                <h2 class="section-title">Research Collaborations</h2>
+                <p style="max-width: 600px; margin: 0 auto 2rem auto;">
+                    We work with leading institutions and industry partners worldwide to advance our research and translate discoveries into real-world applications.
+                </p>
+                <a href="collaborations.html" class="btn">View Our Collaborations</a>
+            </div>
+        </section>
+
+        <section class="section section-bg-alt">
+            <div class="container text-center">
+                <h2 class="section-title">Get Involved</h2>
+                <p style="max-width: 700px; margin: 0 auto 2rem auto;">
+                    Interested in contributing to cutting-edge research in protein-material interfaces? 
+                    We offer opportunities for students, postdocs, and collaborators at all levels.
+                </p>
+                <div class="mt-2">
+                    <a href="../opportunities.html" class="btn">View Opportunities</a>
+                    <a href="../publications.html" class="btn btn-outline" style="margin-left: 1rem;">Our Publications</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© <span id="currentYear"></span> Protein Material Interface Group | School of Pharmacy, Queen's University Belfast</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
+</body>
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

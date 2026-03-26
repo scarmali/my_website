@@ -3,225 +3,367 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research - Protein-Material Interface Group</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Research – PRIME Lab</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/ico" href="../images/favicon.ico"/>
     <link rel="stylesheet" href="../style.css">
     <style>
-        .research-area-content {
-            display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 2rem;
-            align-items: start;
-            margin-top: 1rem;
-        }
-        
-        .research-figure {
-            background: #f8f9fa;
-            border: 2px dashed #dee2e6;
-            border-radius: 8px;
-            padding: 2rem;
-            text-align: center;
-            color: #6c757d;
-            font-style: italic;
-            min-height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .pipeline-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 4rem 0;
-        }
-        
-        .pipeline-flow {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin: 2rem 0;
+        .research-hero {
+            background: linear-gradient(135deg, #0a3d62 0%, #1f4e79 60%, #1e88e5 100%);
+            color: #fff;
+            padding: 7rem 0 5rem;
             text-align: center;
         }
-        
-        .pipeline-arrow {
-            font-size: 2rem;
-            margin: 0 1rem;
-            color: #ffd700;
+        .research-hero h1 { color:#fff; font-size:2.8rem; margin-bottom:0.5rem; text-shadow:0 2px 8px rgba(0,0,0,0.2); }
+        .hero-tag {
+            display:inline-block; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.35);
+            color:#fff; font-size:0.9rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase;
+            border-radius:50px; padding:0.4rem 1.2rem; margin-bottom:1.5rem;
         }
-        
-        @media (max-width: 768px) {
-            .research-area-content {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-            
-            .research-figure {
-                min-height: 150px;
-                padding: 1rem;
-            }
-            
-            .pipeline-flow {
-                font-size: 1.2rem;
-            }
-            
-            .pipeline-arrow {
-                display: block;
-                margin: 1rem 0;
-            }
+        .research-hero p { color:rgba(255,255,255,0.9); font-size:1.2rem; max-width:780px; margin:0 auto 2.5rem; line-height:1.8; }
+
+        .thread-banner { background:#fff; padding:2.8rem 0; text-align:center; border-bottom:1px solid #e8e8e8; }
+        .thread-banner h2 { font-size:1.1rem; text-transform:uppercase; letter-spacing:0.15em; color:#5f6770; font-weight:500; margin-bottom:1.5rem; }
+        .thread-flow { display:flex; justify-content:center; align-items:center; gap:0.75rem; flex-wrap:wrap; }
+        .thread-step {
+            display:flex; flex-direction:column; align-items:center; gap:0.3rem;
+            padding:1rem 2rem; border-radius:10px; color:#fff; font-weight:600; font-size:1.05rem;
+            min-width:155px; box-shadow:0 4px 14px rgba(0,0,0,0.1);
+        }
+        .thread-step .step-icon { font-size:1.5rem; }
+        .thread-step .step-sub { font-size:0.78rem; font-weight:400; opacity:0.9; }
+        .step-blue   { background-color:#1f4e79; }
+        .step-green  { background-color:#2e8b57; }
+        .step-orange { background-color:#f28c28; }
+        .thread-arrow { font-size:1.8rem; color:#bbb; }
+
+        .pillar-section { padding:5rem 0; }
+        .pillar-alt { background-color:rgba(248,249,250,0.95); }
+
+        .pillar-header { display:flex; align-items:center; gap:1.2rem; margin-bottom:1.8rem; }
+        .pillar-badge {
+            display:inline-flex; align-items:center; justify-content:center;
+            width:52px; height:52px; border-radius:12px; font-size:1.4rem; flex-shrink:0;
+        }
+        .badge-blue   { background-color:#e8f0f8; }
+        .badge-green  { background-color:#e6f4ed; }
+        .badge-orange { background-color:#fdf1e3; }
+        .pillar-label { font-size:0.82rem; font-weight:600; text-transform:uppercase; letter-spacing:0.12em; color:#888; display:block; margin-bottom:0.15rem; }
+        .pillar-header h2 { font-size:1.8rem; margin:0; }
+        .color-blue   { color:#1f4e79 !important; }
+        .color-green  { color:#2e8b57 !important; }
+        .color-orange { color:#f28c28 !important; }
+
+        .pillar-description { font-size:1.05rem; line-height:1.8; color:#5f6770; max-width:680px; margin-bottom:2rem; }
+
+        .pillar-layout { display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:start; }
+
+        .research-topics { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.85rem; }
+        .research-topics li {
+            display:flex; align-items:flex-start; gap:0.9rem; padding:1rem 1.2rem;
+            background:#fff; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.05);
+            font-size:0.97rem; color:#343a40; border-left:3px solid transparent;
+        }
+        .research-topics li .dot { width:9px; height:9px; border-radius:50%; margin-top:5px; flex-shrink:0; }
+        .dot-blue   { background-color:#1f4e79; }
+        .dot-green  { background-color:#2e8b57; }
+        .dot-orange { background-color:#f28c28; }
+        .topics-blue li   { border-left-color:#1f4e79; }
+        .topics-green li  { border-left-color:#2e8b57; }
+        .topics-orange li { border-left-color:#f28c28; }
+
+        .pillar-image-block { border-radius:14px; overflow:hidden; box-shadow:0 8px 30px rgba(0,0,0,0.1); }
+        .pillar-image-placeholder {
+            width:100%; height:320px; display:flex; flex-direction:column; align-items:center;
+            justify-content:center; gap:0.75rem; font-size:3.5rem; border-radius:14px;
+        }
+        .placeholder-blue   { background:linear-gradient(135deg,#e8f0f8,#c7d8ed); }
+        .placeholder-green  { background:linear-gradient(135deg,#e6f4ed,#b8dfc8); }
+        .placeholder-orange { background:linear-gradient(135deg,#fdf1e3,#f9d4a0); }
+        .pillar-image-placeholder span { font-size:1rem; font-weight:600; color:rgba(0,0,0,0.35); text-transform:uppercase; letter-spacing:0.1em; }
+
+        .vision-section { background:linear-gradient(135deg,#0a3d62 0%,#1f4e79 100%); color:#fff; padding:5rem 0; text-align:center; }
+        .vision-section h2 { color:#fff; font-size:2rem; margin-bottom:1.2rem; }
+        .vision-section p { color:rgba(255,255,255,0.88); font-size:1.15rem; max-width:820px; margin:0 auto 1rem; line-height:1.85; }
+        .vision-tagline { font-size:1.25rem !important; font-style:italic; color:#4dd0e1 !important; font-weight:500; margin-top:2rem !important; }
+
+        .impact-section { padding:5rem 0; background:#fff; }
+        .impact-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.8rem; margin-top:2.5rem; }
+        .impact-card { border-radius:12px; padding:2rem 1.5rem; text-align:center; }
+        .ic-blue   { background:#e8f0f8; border-top:4px solid #1f4e79; }
+        .ic-green  { background:#e6f4ed; border-top:4px solid #2e8b57; }
+        .ic-orange { background:#fdf1e3; border-top:4px solid #f28c28; }
+        .impact-card .ic-icon { font-size:2.2rem; margin-bottom:0.75rem; }
+        .impact-card h4 { font-size:1.1rem; margin-bottom:0.6rem; }
+        .ic-blue h4   { color:#1f4e79; }
+        .ic-green h4  { color:#2e8b57; }
+        .ic-orange h4 { color:#f28c28; }
+        .impact-card p { font-size:0.92rem; color:#5f6770; margin:0; }
+
+        @media (max-width:900px) {
+            .pillar-layout { grid-template-columns:1fr; }
+            .pillar-image-placeholder { height:220px; }
+            .impact-grid { grid-template-columns:1fr; }
+        }
+        @media (max-width:600px) {
+            .research-hero h1 { font-size:2rem; }
+            .thread-step { min-width:120px; padding:0.8rem 1.2rem; font-size:0.92rem; }
         }
     </style>
 </head>
 <body>
-    <header class="site-header">
+
+<header class="site-header">
+    <div class="container">
+        <a href="../index.html" class="logo">
+            <img src="../images/PMIG Logo Colour.png" alt="PRIME Lab Logo">
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li class="nav-item-has-dropdown">
+                    <a href="index.html" class="active">Research <span class="dropdown-arrow">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="collaborations.html">Collaborations</a></li>
+                    </ul>
+                </li>
+                <li><a href="../team.html">Team</a></li>
+                <li><a href="../publications.html">Publications</a></li>
+                <li><a href="../opportunities.html">Opportunities</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    </div>
+</header>
+
+<main>
+
+    <!-- Hero -->
+    <section class="research-hero">
         <div class="container">
-            <a href="../index.html" class="logo">
-                <img src="../images/PMIG Logo Colour.png" alt="PMIG - Protein-Material Interface Group Logo">
-            </a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li class="nav-item-has-dropdown">
-                        <a href="index.html" class="active">Research <span class="dropdown-arrow">▾</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="collaborations.html">Collaborations</a></li>
-                        </ul>
+            <div class="hero-tag">Research Programme</div>
+            <h1>Engineering Biomolecular Interfaces</h1>
+            <p>We develop predictive and mechanistic strategies to engineer biomolecular interfaces, enabling control over protein behaviour for next-generation therapeutic systems.</p>
+        </div>
+    </section>
+
+    <!-- Golden Thread -->
+    <section class="thread-banner">
+        <div class="container">
+            <h2>Our Golden Thread</h2>
+            <div class="thread-flow">
+                <div class="thread-step step-blue">
+                    <span class="step-icon">🔬</span>
+                    <span>Understand</span>
+                    <span class="step-sub">Mechanistic insight</span>
+                </div>
+                <div class="thread-arrow">→</div>
+                <div class="thread-step step-green">
+                    <span class="step-icon">💻</span>
+                    <span>Predict</span>
+                    <span class="step-sub">Computational tools</span>
+                </div>
+                <div class="thread-arrow">→</div>
+                <div class="thread-step step-orange">
+                    <span class="step-icon">⚙️</span>
+                    <span>Control</span>
+                    <span class="step-sub">Therapeutic application</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pillar 1: Understanding -->
+    <section class="pillar-section">
+        <div class="container">
+            <div class="pillar-header">
+                <div class="pillar-badge badge-blue">🔬</div>
+                <div>
+                    <span class="pillar-label color-blue">Pillar 1</span>
+                    <h2 class="color-blue">Understanding Interfaces</h2>
+                </div>
+            </div>
+            <p class="pillar-description">
+                Our foundation is mechanistic. We study how molecular interactions at biomolecular interfaces govern protein behaviour — uncovering the rules that determine stability, structure, and function in complex environments.
+            </p>
+            <div class="pillar-layout">
+                <ul class="research-topics topics-blue">
+                    <li>
+                        <div class="dot dot-blue"></div>
+                        <span><strong>Protein–lipid interactions</strong> — how proteins interact with lipid membranes and nanocarrier surfaces, shaping structural and functional outcomes</span>
                     </li>
-                    <li><a href="../team.html">Team</a></li>
-                    <li><a href="../publications.html">Publications</a></li>
-                    <li><a href="../opportunities.html">Opportunities</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
+                    <li>
+                        <div class="dot dot-blue"></div>
+                        <span><strong>Hydrophobic ion pairing (HIP)</strong> — understanding how ion pairing modifies protein solubility, membrane permeability, and stability at interfaces</span>
+                    </li>
+                    <li>
+                        <div class="dot dot-blue"></div>
+                        <span><strong>Structure–function relationships</strong> — linking molecular conformation at interfaces to biological activity and therapeutic performance</span>
+                    </li>
+                    <li>
+                        <div class="dot dot-blue"></div>
+                        <span><strong>Mechanistic characterisation</strong> — biophysical techniques to probe interaction dynamics, thermodynamics, and structural changes at the interface</span>
+                    </li>
                 </ul>
-            </nav>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+                <div class="pillar-image-placeholder placeholder-blue">
+                    🧬
+                    <span>Understanding Interfaces</span>
+                </div>
+            </div>
         </div>
-    </header>
+    </section>
 
-    <main>
-        <section class="hero-landing">
-            <div class="hero-landing-content container">
-                <h1>Our Research</h1>
-                <p>Design → Engineer → Deliver </p>
-            </div>
-        </section>
-
-        <section class="research-highlights">
-            <div class="container">
-                <h2 class="section-title">A Multi-Scale Research Approach</h2>
-                <p class="text-center" style="max-width: 800px; margin: 0 auto 3rem auto; font-size: 1.1rem; color: var(--medium-text);">
-                    Our research group focuses on the fundamental understanding and engineering of protein-material interfaces 
-                    to develop next-generation therapeutic delivery systems. By combining computational tools, chemical biology, and advanced materials science, we create protein therapeutics that are fundamentally more intelligent and controllable than conventional approaches.</p>
-            </div>
-        </section>
-
-        <section class="section section-bg-alt">
-            <div class="container">
-                <h2 class="section-title">From Design to Delivery</h2>
-                
-                <div class="research-area">
-                    <h3>Precision Protein Design</h3>
-                    <h4 style="font-style: italic; color: var(--medium-text); margin-bottom: 1rem;">How can we predict and control exactly where modifications occur on proteins?</h4>
-                    
-                    <div class="research-area-content">
-                        <div>
-                            <p>
-                                The foundation of controllable therapeutics begins with molecular-level precision. We use computational methods to predict and precisely control protein modification sites,
-                                enabling the rational design of protein therapeutics with pre-determined properties. Our approach combines molecular dynamics simulations with 
-                                experimental validation to create predictive models that guide site-specific bioconjugation strategies. Using structure-guided design principles, we can target specific amino acid residues with atomic-level accuracy.
-                                This foundational capability allows us to engineer proteins with atomic level precision, setting the stage for creating responsive systems and advanced delivery platforms
-                            </p>
-                            <ul>
-                                <li>PRELYM algorithm for lysine reactivity prediction</li>
-                                <li>Structure-guided modification site selection</li>
-                                <li>Controlled polymer density and location</li>
-                                <li>Predictable therapeutic proteins</li>
-                            </ul>
-                        </div>
-                        <div class="research-figure">
-                            [Protein structure diagram showing computational prediction of lysine reactivity sites with ATRP polymer growth visualization]
-                        </div>
-                    </div>
-                </div>
-
-                <div class="research-area">
-                    <h3>Smart Protein Engineering</h3>
-                    <h4 style="font-style: italic; color: var(--medium-text); margin-bottom: 1rem;">Can we create proteins that intelligently adapt to their environment?</h4>
-                    
-                    <div class="research-area-content">
-                        <div>
-                            <p>
-                                Building on our precision design capabilities, we engineer smart protein systems that intelligently respond to specific biological stimuli such as pH, 
-                                temperature, or chemical environment. These responsive systems enable proteins to function optimally under diverse conditions while adapting their behaviour based on the local cellular environment. 
-                                Through rational surfactant selection or polymer engineering, we create adaptive therapeutic systems that can tune their lipophilicity, activity, stability, and substrate specificity in response to environmental changes. These smart, responsive proteins become the foundation for advanced therapeutic formulations that can adapt and deliver targeted treatments precisely when and where needed.
-                            </p>
-                            <ul>
-                                <li>Stimulus-responsive protein engineering</li>
-                                <li>Hydrophobic ion-pairing for tailored solubility</li>
-                                <li>Enhanced stability under non-native conditions</li>
-                                <li>Controlled activity and specificity modulation</li>
-                            </ul>
-                        </div>
-                        <div class="research-figure">
-                            [Diagram showing protein with stimuli-responsive polymer corona and surfactant complexation, demonstrating enhanced activity and adaptability]
-                        </div>
-                    </div>
-                </div>
-
-                <div class="research-area">
-                    <h3>Advanced Therapeutic Formulations</h3>
-                    <h4 style="font-style: italic; color: var(--medium-text); margin-bottom: 1rem;">How can we create programmable delivery systems for protein therapeutics?</h4>
-                    
-                    <div class="research-area-content">
-                        <div>
-                            <p>
-                                We design and synthesise novel formulation platforms that integrate our precisely modified and responsive proteins into complete therapeutic delivery systems. These platforms overcome biological barriers and provide programmable control over when, where, and how therapeutic proteins are delivered.
-                                Our approach encompasses innovative protein-based carriers (e.g., pH-responsive ferritin nanocages) and advanced lipid-based systems for oral delivery, all engineered for controlled therapeutic action.
-                                These therapeutic platforms combine predictable design, responsive behaviour, and controlled delivery to create next-generation protein medicines with programmable therapeutic action.
-                            </p>
-                            <ul>
-                                <li>Self-assembling protein nanocages for controlled encapsulation</li>
-                                <li>Lipid-based nanocarriers for oral biotherapeutic delivery</li>
-                                <li>Site-specific targeting through engineered carriers</li>
-                                <li>Stimuli-triggered release mechanisms</li>
-                            </ul>
-                        </div>
-                        <div class="research-figure">
-                            [Diagram showing ferritin nanocage assembly/disassembly cycle with protein cargo, alongside lipid nanocarrier systems]
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-<section class="section">
-            <div class="container text-center">
-                <h2 class="section-title">Funding and Support</h2>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem; margin-top: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-                    <div style="background: #f8f9fa; border: 2px dashed #dee2e6; border-radius: 8px; padding: 1.5rem; height: 100px; display: flex; align-items: center; justify-content: center; color: #6c757d; font-style: italic;">
-                        [Funding Organization Logo 1]
-                    </div>
-                    <div style="background: #f8f9fa; border: 2px dashed #dee2e6; border-radius: 8px; padding: 1.5rem; height: 100px; display: flex; align-items: center; justify-content: center; color: #6c757d; font-style: italic;">
-                        [Funding Organization Logo 2]
-                    </div>
-                    <div style="background: #f8f9fa; border: 2px dashed #dee2e6; border-radius: 8px; padding: 1.5rem; height: 100px; display: flex; align-items: center; justify-content: center; color: #6c757d; font-style: italic;">
-                        [Funding Organization Logo 3]
-                    </div>
-                    <div style="background: #f8f9fa; border: 2px dashed #dee2e6; border-radius: 8px; padding: 1.5rem; height: 100px; display: flex; align-items: center; justify-content: center; color: #6c757d; font-style: italic;">
-                        [Funding Organization Logo 4]
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
+    <!-- Pillar 2: Predicting -->
+    <section class="pillar-section pillar-alt">
         <div class="container">
-            <p>© <span id="currentYear"></span> Protein-Material Interface Group | School of Pharmacy, Queen's University Belfast</p>
+            <div class="pillar-header">
+                <div class="pillar-badge badge-green">💻</div>
+                <div>
+                    <span class="pillar-label color-green">Pillar 2</span>
+                    <h2 class="color-green">Predicting Interfaces</h2>
+                </div>
+            </div>
+            <p class="pillar-description">
+                Understanding is only the beginning. We build predictive tools that allow us to model, anticipate, and rationally design protein–interface interactions — moving formulation from trial-and-error to principled design.
+            </p>
+            <div class="pillar-layout">
+                <div class="pillar-image-placeholder placeholder-green">
+                    📊
+                    <span>Predicting Interfaces</span>
+                </div>
+                <ul class="research-topics topics-green">
+                    <li>
+                        <div class="dot dot-green"></div>
+                        <span><strong>PRELYM</strong> — a computational framework for predicting protein–lipid interaction outcomes to guide formulation decisions</span>
+                    </li>
+                    <li>
+                        <div class="dot dot-green"></div>
+                        <span><strong>Lipid Logic</strong> — a design-rule toolkit to systematically select and optimise lipid components based on predicted interactions with target proteins</span>
+                    </li>
+                    <li>
+                        <div class="dot dot-green"></div>
+                        <span><strong>Interface modelling</strong> — computational approaches to simulate protein behaviour at material surfaces and within delivery systems</span>
+                    </li>
+                    <li>
+                        <div class="dot dot-green"></div>
+                        <span><strong>Reaction prediction</strong> — applying predictive models to formulation chemistry to achieve reproducible, scalable outcomes</span>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </footer>
+    </section>
 
-    <script src="../script.js"></script>
-    <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
+    <!-- Pillar 3: Controlling -->
+    <section class="pillar-section">
+        <div class="container">
+            <div class="pillar-header">
+                <div class="pillar-badge badge-orange">⚙️</div>
+                <div>
+                    <span class="pillar-label color-orange">Pillar 3</span>
+                    <h2 class="color-orange">Controlling Interfaces</h2>
+                </div>
+            </div>
+            <p class="pillar-description">
+                Mechanistic understanding, made predictive, becomes actionable. We engineer interfaces to produce functional therapeutic systems — designed from first principles to perform reliably in complex biological environments.
+            </p>
+            <div class="pillar-layout">
+                <ul class="research-topics topics-orange">
+                    <li>
+                        <div class="dot dot-orange"></div>
+                        <span><strong>Nanostructured lipid carriers (NLCs)</strong> — engineering lipid-based nanoparticle systems with controlled protein–interface properties for improved biological performance</span>
+                    </li>
+                    <li>
+                        <div class="dot dot-orange"></div>
+                        <span><strong>Oral biologics</strong> — developing interface strategies to protect and deliver therapeutic proteins via the oral route, including oral insulin platforms</span>
+                    </li>
+                    <li>
+                        <div class="dot dot-orange"></div>
+                        <span><strong>Ferritin nanocages</strong> — exploiting protein self-assembly at interfaces for targeted delivery and controlled cargo loading</span>
+                    </li>
+                    <li>
+                        <div class="dot dot-orange"></div>
+                        <span><strong>Stabilisation strategies</strong> — applying interface engineering to maintain protein structure and activity in non-native environments encountered during formulation and delivery</span>
+                    </li>
+                </ul>
+                <div class="pillar-image-placeholder placeholder-orange">
+                    💊
+                    <span>Controlling Interfaces</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision -->
+    <section class="vision-section">
+        <div class="container">
+            <h2>Our Research Vision</h2>
+            <p>
+                We are establishing new principles for how biomolecular interfaces can be engineered to control protein behaviour — bridging molecular chemistry, materials science, and therapeutic application.
+            </p>
+            <p>
+                Proteins are inherently difficult to stabilise and deliver in non-native environments. Our approach addresses this fundamental challenge by developing mechanistic insight into interface behaviour and translating it into predictable formulation strategies and new therapeutic delivery routes.
+            </p>
+            <p class="vision-tagline">
+                "We develop predictive and mechanistic strategies to engineer biomolecular interfaces, enabling control over protein behaviour for next-generation therapeutic systems."
+            </p>
+        </div>
+    </section>
+
+    <!-- Why It Matters -->
+    <section class="impact-section">
+        <div class="container">
+            <h2 class="section-title">Why This Matters</h2>
+            <div class="impact-grid">
+                <div class="impact-card ic-blue">
+                    <div class="ic-icon">🧫</div>
+                    <h4>More Stable Biologics</h4>
+                    <p>Interface engineering enables proteins to retain structure and activity in formulation and delivery contexts where they would otherwise degrade or aggregate.</p>
+                </div>
+                <div class="impact-card ic-green">
+                    <div class="ic-icon">🎯</div>
+                    <h4>Predictable Formulation</h4>
+                    <p>Tools like PRELYM and Lipid Logic move formulation design from empirical screening to principled, hypothesis-driven strategies.</p>
+                </div>
+                <div class="impact-card ic-orange">
+                    <div class="ic-icon">🌍</div>
+                    <h4>New Delivery Routes</h4>
+                    <p>Our oral biologic platforms open patient-friendly delivery routes for therapeutic proteins — including oral insulin — that were previously inaccessible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section-bg-alt" style="text-align:center;">
+        <div class="container">
+            <h2 class="section-title">Work With Us</h2>
+            <p style="max-width:650px;margin:0 auto 2rem auto;color:#5f6770;font-size:1.05rem;">
+                We welcome collaborators, students, and researchers who share our curiosity about how interfaces shape biological function. If our work resonates with you, get in touch.
+            </p>
+            <a href="../opportunities.html" class="btn" style="margin-right:1rem;">Join the PRIME Lab</a>
+            <a href="../contact.html" class="btn btn-outline">Get in Touch</a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© <span id="currentYear"></span> PRIME Lab – Protein–Interface Molecular Engineering</p>
+        <p>School of Pharmacy, Queen's University Belfast</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/sheilizacarmali/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                <img src="../images/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile">
+                <img src="../images/instagram.png" alt="Instagram">
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script src="../script.js"></script>
+<script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
 </body>
 </html>
